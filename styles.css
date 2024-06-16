@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#ligtnote {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(100, 57, 35);
+}
+
+#ligtnote div {
+    width: 50%;
+}
+
+#ligtnote div iframe {
+    width: 100%;
+    height: 210px;
+    border: none;
+}
