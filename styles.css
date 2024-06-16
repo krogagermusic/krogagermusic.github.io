@@ -5,20 +5,25 @@ html, body {
     width: 100%;
 }
 
-#ligtnote {
+section {
     display: grid;
     place-items: center;
     width: 100%;
-    height: 100%;
+    min-height: 100vh; /* Обеспечивает, что секция занимает минимум высоту экрана */
+}
+
+#ligtnote {
     background-color: rgb(100, 57, 35);
 }
 
-#ligtnote div {
-    width: 50%;
+#return {
+    background-color: rgb(38, 97, 133);
 }
 
-#ligtnote div iframe {
-    width: 100%;
-    height: 210px;
-    border: none;
+#katz {
+    background-color: rgb(61, 45, 38);
+}
+
+#ligtnote div, #return div, #katz div {
+    width: 50%;
 }
