@@ -5,6 +5,68 @@ html, body {
     width: 100%;
 }
 
+/*Убрать полосу прокрутки у элемента*/
+.element::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  /*Убрать полосу прокрутки для всей страницы*/
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  #randomButtonContainer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    overflow: hidden; /* Обрезает элементы, выходящие за пределы контейнера */
+}
+
+#randomButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    z-index: 1000; /* Обеспечивает, что кнопка находится выше других элементов */
+    font-weight: bold; /* Толщина текста */
+    color: #333; /* Темный цвет текста */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+}
+
+#randomButtonContainer::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.3), rgba(255, 255, 0, 0.3), rgba(0, 255, 0, 0.3), rgba(0, 255, 255, 0.3), rgba(0, 0, 255, 0.3), rgba(255, 0, 255, 0.3), rgba(255, 0, 0, 0.3));
+    background-size: 400%;
+    border-radius: 15px; /* Изменена форма для более мягкого вида */
+    z-index: -1;
+    filter: blur(10px);
+    animation: gradientAnimation 10s infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#songTitle {
+    font-weight: bold;
+}
+
+
+
 section {
     display: grid;
     place-items: center;
@@ -24,6 +86,11 @@ section {
     background-color: rgb(61, 45, 38);
 }
 
-#ligtnote div, #return div, #katz div {
+#bred {
+    background-color: rgb(158, 115, 108);
+}
+
+
+#ligtnote div, #return div, #katz div, #bred div{
     width: 50%;
 }
